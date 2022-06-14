@@ -6,13 +6,13 @@ name: tests
 on:
   push:
     branches:
-      -main
+      -master
   release:
     types: [created]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -20,13 +20,12 @@ jobs:
           node-version: 16
           build: npm run build
           start: npm start
-      - run: npm main_page
       - run: npm ci
       - run: npm test
 
   publish-npm:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
