@@ -60,8 +60,8 @@ exports.config = {
         'goog:chromeOptions': {
             args: ['--start-maximized', 
             '--allow-insecure-localhost', 
-            '--ignore-certificate-errors',
-            '--headless']
+            '--ignore-certificate-errors'
+            ]
         },
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs

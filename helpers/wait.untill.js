@@ -60,10 +60,15 @@ async setValue(element, value) {
    
         const clickAgree = await browser.$('[class="_63c1e _28d6f _0d55d primary-border"]');   
         await clickAgree.click();
+    }
 
-        
-
-
+    async switchWindow() {
+        await browser.pause(1000)
+        await browser.getWindowHandles().then(async (handles) => {
+            const handlesNum = await handles.lenght -1
+            browser.switchToWindow(await handles[handlesNum])
+            console.log('switchToWindow')
+        });
     }
 
     

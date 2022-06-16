@@ -120,7 +120,7 @@ class MainPage {
     }
 
     async waitListHeaderIsVisible() {
-        const waitListHeader = $('[class="sc-31ce2512-5 locIEM"] span')
+        const waitListHeader = $('[class="sc-a7a16c36-6 bZeRhp"] span')
         assert.equal(await waitListHeader.getText(), 'Better cloud storage, for less.')
     }
 

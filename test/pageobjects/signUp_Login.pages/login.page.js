@@ -69,5 +69,33 @@ class LoginPage {
         const currentUrl = await browser.getUrl()
         assert('https://portal.telnyx.com/#/login/sign-in', await currentUrl)
     }
+    
+
+    async switchWindow() {
+        let handle = await browser.getWindowHandle();
+    }
+
+    async switchToWindow() {
+        let cHandle = await browser.getWindowHandle();
+        console.log('curr*********************' + await cHandle)
+        let newHandle
+        await main.clickLoginButton();
+        await loginPage.clickloginWithGoogle();
+        await browser.pause(3000)
+        let handles = await browser.getWindowHandles();
+        console.log('handles************************' + await handles)
+        console.log('length is ' + handles.length)
+        for(let i=0; i<await handles.length; i++){
+            if(handles[i]!=await cHandle){
+                newHandle=await handles[i]
+                
+            }
+            
+        }
+        
+        console.log('new********************' + await newHandle);
+        console.log('switched to ' + await browser.getWindowHandle());
+        console.log('Title is ' + await browser.getTitle())
+    }
 }
 module.exports = new LoginPage()

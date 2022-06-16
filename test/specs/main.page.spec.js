@@ -29,43 +29,42 @@ describe('main page testing', () => {
 
     })
 
-    xit('open products dropdown menu if mouse hover on ', async() => {
-        await main.clickAcceptButton();
+    it('open products dropdown menu if mouse hover on ', async() => {
         await main.focusDropdown(productButton);
         await dropdownHeaders.headerIsVisible(sipTrunkingButton)
     })
     
-    xit('open solution dropdown menu if mouse hover on ', async() => {
+    it('open solution dropdown menu if mouse hover on ', async() => {
         await main.focusDropdown(solutionButton);
         await dropdownHeaders.headerIsVisible(allSolutionsButton)
     })
 
-    xit('open resources dropdown menu if mouse hover on ', async() => {
+    it('open resources dropdown menu if mouse hover on ', async() => {
         await main.focusDropdown(resourcesButton);
         await dropdownHeaders.headerIsVisible(developerDocsButton)
     })
 
-    xit('open company dropdown menu if mouse hover on ', async() => {
+    it('open company dropdown menu if mouse hover on ', async() => {
         await main.focusDropdown(companyButton);
         await dropdownHeaders.headerIsVisible(aboutCompanyButton)
     })
 
-    xit('open pricing dropdown menu if mouse hover on ', async() => {
+    it('open pricing dropdown menu if mouse hover on ', async() => {
         await main.focusDropdown(pricingButton);
         await dropdownHeaders.headerIsVisible(allPricingButton)
     })
 
-    xit('redirect to support center page', async() => {
+    it('redirect to support center page', async() => {
         await main.clickSupportCenter()
         await main.supportCenterUrl()
     })
 
-    xit('redirect to Talk to an expert page', async () => {
+    it('redirect to Talk to an expert page', async () => {
         await main.clickTalkToAnExpert();
         await main.talkToExpertHeaderIsVisible();
     })
 
-    xit('make an appointment to talk to expert with Sales Inquiry reason', async () => {
+    it('make an appointment to talk to expert with Sales Inquiry reason', async () => {
         await main.clickTalkToAnExpert();
         await talkToExpertPage.selectSalesReason();
         await talkToExpertPage.setFirstName('tester');
@@ -86,7 +85,7 @@ describe('main page testing', () => {
         await talkToExpertPage.meetingInfoTextIsVisible();
     })
 
-    xit('make an appointment to talk to expert with Support reason', async () => {
+    it('make an appointment to talk to expert with Support reason', async () => {
         await main.clickTalkToAnExpert();
         await talkToExpertPage.selectSupportReason();
         await talkToExpertPage.setFirstName('tester');
@@ -99,9 +98,9 @@ describe('main page testing', () => {
         await talkToExpertPage.thanksHeaderIsVisible();
     })
 
-    xit('cancel the recording of the talk to expert', async () => {
+    it('cancel the recording of the talk to expert', async () => {
         await main.clickTalkToAnExpert();
-        await talkToExpertPage.selectReasonValue();
+        await talkToExpertPage.selectSalesReason();
         await talkToExpertPage.setFirstName('tester');
         await talkToExpertPage.setLastName('tester');
         await talkToExpertPage.setBusinessEmail(random.randomEmail());
@@ -118,73 +117,72 @@ describe('main page testing', () => {
         await talkToExpertPage.currentPageUrl();
     })
 
-    xit('redirecting to Sign Up page from main page by Try for free option', async () => {
+    it('redirecting to Sign Up page from main page by Try for free option', async () => {
         await main.setEmailInMainPage(random.randomEmail());
         await main.clickTryForFreeButton();
         await main.pageURL();
     })
 
-    xit('should display header dropdown menu', async () => {
-        await main.clickAcceptButton();
+    it('should display header dropdown menu', async () => {
         await main.scrollToText();
         await main.scrollToLogo();
         await main.dropdownIsVisible()
     })
 
-    xit('redirect to g2 page', async () => {
+    it('redirect to g2 page', async () => {
         await main.clickG2link();
         await browser.pause(1000)
         await main.g2pageURL();
         await browser.pause(1000)
     })
 
-    xit('redirect to Telnyx API Documentation page', async () => {
+    it('redirect to Telnyx API Documentation page', async () => {
         await main.clickLearnMore();
         await main.APIheaderIsVisible()
     })
 
-    xit('redirect to products page', async () => {
+    it('redirect to products page', async () => {
         await main.clickExploreProductsButton();
         await main.productPageURL()
     })
 
-    xit('redirect to storage page to Join the waitlist', async () => {
+    it('redirect to storage page to Join the waitlist', async () => {
      
         await main.clickWaitListLink();
         await main.waitListHeaderIsVisible()
     })
 
-    xit('click all question', async () => {
+    it('click all question', async () => {
         await main.clickWaitListLink();
         await faq.getQuestions()
     })
 
-    xit('get headers from Products dropdown in header', async () => {
+    it('get headers from Products dropdown in header', async () => {
         await main.focusDropdown(productButton);
         await main.getTextFromProducts()
     })
 
-    xit('get headers from Solution dropdown in header', async () => {
+    it('get headers from Solution dropdown in header', async () => {
         await main.focusDropdown(solutionButton);
         await main.getTextFromSolutions()
     })
 
-    xit('get headers from Resources dropdown in header', async () => {
+    it('get headers from Resources dropdown in header', async () => {
         await main.focusDropdown(resourcesButton);
         await main.getTextFromResources()
     })
 
-    xit('get headers from Company dropdown in header', async () => {
+    it('get headers from Company dropdown in header', async () => {
         await main.focusDropdown(companyButton);
         await main.getTextFromCompany()
     })
 
-    xit('get headers from Pricing dropdown in header', async () => {
+    it('get headers from Pricing dropdown in header', async () => {
         await main.focusDropdown(pricingButton);
         await main.getTextFromPricing()
     })
 
-    xit('get headers from footer blocks', async () => {
+    it('get headers from footer blocks', async () => {
         await main.scrollToFooter();
         await main.getTextFromFooterTitles()
     })

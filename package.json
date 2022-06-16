@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js",
-    "main_page": "wdio main.page.conf.js"
+    "main_page": "wdio main.page.conf.js",
+    "test2": "wdio wdio.headless.conf.js",
+    "main_page_headless": "wdio main_page.headless.conf.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wdio/allure-reporter": "^7.20.0",
     "@wdio/cli": "^7.19.7",
     "@wdio/local-runner": "^7.19.7",
     "@wdio/mocha-framework": "^7.19.7",
@@ -24,11 +27,12 @@
     "es-abstract": "^1.20.1",
     "es-to-primitive": "^1.2.1",
     "exit-on-epipe": "^1.0.1",
-    "wdio-chromedriver-service": "^7.3.2"
+    "wdio-chromedriver-service": "^7.3.2",
+    "wdio-selenium-standalone-service": "^0.0.12"
   },
   "dependencies": {
+    "@wdio/selenium-standalone-service": "^7.20.1",
     "es6-object-assign": "^1.1.0",
     "googleapis": "^100.0.0"
   }
-
 }

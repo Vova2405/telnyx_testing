@@ -8,6 +8,7 @@ const checkbox = '[for="subscription_opt_in"]';
 const sentLetter = 'h1[class*=" gkWopw etvJmf"]';
 const emailError = '#email_error';
 const nameError = '#full_name_error';
+const agreeTermsCheckbox = '[aria-labelledby="terms-label"]'
 
 
 class SignUpPage{
@@ -34,6 +35,9 @@ class SignUpPage{
 
     async clickCheckbox() {
         await wait.click(checkbox)
+    }
+    async clickTermsAndPolicy() {
+        await wait.click(agreeTermsCheckbox)
     }
 
     async sentLetterIsVisible() {
