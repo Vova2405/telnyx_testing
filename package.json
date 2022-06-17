@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js",
-    "main_page": "wdio main.page.conf.js",
+   
     "test2": "wdio wdio.headless.conf.js",
     "main_page_headless": "wdio main_page.headless.conf.js"
   },
