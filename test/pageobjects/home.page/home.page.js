@@ -5,15 +5,21 @@ const logOutButton  = '[class="tx-1Iv0kw"]';
 
 
 class HomePage {
-
+    
+    async redirectToHomePage() {
+        await browser.waitUntil(async () => {
+            await expect(browser).toHaveUrlContaining('https://portal.telnyx.com/#/app/');
+                 30000
+        })}
+    
     async accountDropdownFocus () {
 //         await wait.waitUntilDisplayed(accountDropdown);
 //         await wait.moveTo(accountDropdown);
-         await browser.waitUntil(async () => {
-            await expect(browser).toHaveUrlContaining('https://portal.telnyx.com/#/app/');
-                 30000
+//          await browser.waitUntil(async () => {
+//             await expect(browser).toHaveUrlContaining('https://portal.telnyx.com/#/app/');
+//                  30000
             
-        })
+//         })
         await $('[class="d-flex align-items-center tx-2c709E"]').waitForDisplayed({timeout: 30000});
         await $('[class="d-flex align-items-center tx-2c709E"]').moveTo()
     }
