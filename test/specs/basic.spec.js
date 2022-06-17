@@ -33,6 +33,7 @@ describe('main page testing',() => {
         await loginPage.setPasswordValue('Noone123456.');
         await loginPage.clickLoginButton();
 //         await browser.pause(7000)
+        await homePage.redirectToHomePage()
         await loginPage.homeHeaderIsVisible();
         await homePage.accountDropdownFocus();
         await homePage.clickLOgOutButton()
