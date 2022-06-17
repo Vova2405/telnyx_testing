@@ -34,9 +34,10 @@ describe('main page testing',() => {
         await loginPage.getValues()
         await loginPage.clickLoginButton();
         await loginPage.clickLoginButton();
-        await loginPage.buttonEnabled()
-        await browser.pause(15000)
-        await homePage.redirectToHomePage()
+        await loginPage.buttonEnabled();
+        await browser.pause(15000);
+        await loginPage.buttonEnabled();
+        await homePage.redirectToHomePage();
         await loginPage.homeHeaderIsVisible();
         await homePage.accountDropdownFocus();
         await homePage.clickLOgOutButton()
