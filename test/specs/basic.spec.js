@@ -31,6 +31,7 @@ describe('main page testing',() => {
         await main.clickLoginButton();
         await loginPage.setEmailValue('phenom2405@gmail.com');
         await loginPage.setPasswordValue('Noone123456.');
+        await loginPage.getValues()
         await loginPage.clickLoginButton();
         await loginPage.clickLoginButton();
         await browser.pause(15000)
