@@ -21,8 +21,8 @@ jobs:
           build: npm run build
           start: npm start
       - run: npm ci
-      - run: ./wdio.headless.conf.js 
-      - run: ./main_page.headless.conf.js
+      - run: test2 
+      - run: main_page_headless
 
   publish-npm:
     needs: build
