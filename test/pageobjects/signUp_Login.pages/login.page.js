@@ -17,6 +17,11 @@ const homeHeader = '[class="tx-Z12BLcq"]'
 class LoginPage {
     get errorMessage() {return $('[class="Message__MessageCopy-izQIRg dJvVGg"]')};
     get emailError() {return $('[class="TextField__ErrorMessage-wqPfx fjBYhj"]')}
+    
+    async getValues() {
+        console.log('login is ' + await $('[class*="eSxLXo"] [name="email"]').getValue());
+        console.log('password is ' + await $('[class*="gxdokR"] [name="password"]').getValue())
+    }
 
     async homeHeaderIsVisible() {
         await wait.waitUntilDisplayed(homeHeader);
