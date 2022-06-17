@@ -22,6 +22,9 @@ class LoginPage {
         console.log('login is ' + await $('[class*="eSxLXo"] [name="email"]').getValue());
         console.log('password is ' + await $('[class*="gxdokR"] [name="password"]').getValue())
     }
+    
+    async buttonEnabled() {
+        await $('//button[text()="Log in"]').isEnabled()
 
     async homeHeaderIsVisible() {
         await wait.waitUntilDisplayed(homeHeader);
