@@ -23,6 +23,17 @@ class LoginPage {
         console.log('password is ' + await $('[class*="gxdokR"] [name="password"]').getValue())
     }
     
+     async ifEnabled() {
+        if(await $('//button[text()="Log in"]').isEnabled() == true) {
+            await $('//button[text()="Log in"]').click();
+            console.log('clicked again');
+        } if(await $('//button[text()="Log in"]').isExisting() == false) {
+            console.log('not exist')
+        } else{
+            console.log('not enabled')
+        }
+    }
+    
     async buttonEnabled() {
         console.log('is enabled ' + await $('//button[text()="Log in"]').isEnabled())
     }
