@@ -7,8 +7,10 @@ const logOutButton  = '[class="tx-1Iv0kw"]';
 class HomePage {
 
     async accountDropdownFocus () {
-        await wait.waitUntilDisplayed(accountDropdown);
-        await wait.moveTo(accountDropdown);
+//         await wait.waitUntilDisplayed(accountDropdown);
+//         await wait.moveTo(accountDropdown);
+        await $('[class="d-flex align-items-center tx-2c709E"]').waitForDisplayed({timeout: 30000});
+        await $('[class="d-flex align-items-center tx-2c709E"]').moveTo()
     }
 
     async clickLOgOutButton () {
