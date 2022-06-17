@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm test2
+      - run: npm run test2
       - run: main_page_headless
 
   publish-gpr:
