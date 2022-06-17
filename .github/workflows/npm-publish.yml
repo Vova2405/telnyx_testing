@@ -21,7 +21,7 @@ jobs:
           build: npm run build
           start: npm start
       - run: npm ci
-      - run: npm test2 
+      - run: npm run test2
 
 
   publish-npm:
