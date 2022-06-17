@@ -2,7 +2,7 @@ const {config} = require("./wdio.conf");
 
 const chromeHeadlessConfig = {
     ...config,
-    services: [[{chrome: 'latest'}]],
+    services: ['chromedriver'],
     capabilities: [{
         maxInstances: 3,
         browserName: "chrome",
