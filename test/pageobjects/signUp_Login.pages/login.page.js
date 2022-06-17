@@ -24,7 +24,8 @@ class LoginPage {
     }
     
     async buttonEnabled() {
-        await $('//button[text()="Log in"]').isEnabled()
+        console.log('is enabled ' + await $('//button[text()="Log in"]').isEnabled())
+    }
 
     async homeHeaderIsVisible() {
         await wait.waitUntilDisplayed(homeHeader);
