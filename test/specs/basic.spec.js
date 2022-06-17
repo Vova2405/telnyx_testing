@@ -34,6 +34,7 @@ describe('main page testing',() => {
         await loginPage.getValues()
         await loginPage.clickLoginButton();
         await loginPage.clickLoginButton();
+        await loginPage.buttonEnabled()
         await browser.pause(15000)
         await homePage.redirectToHomePage()
         await loginPage.homeHeaderIsVisible();
