@@ -2,7 +2,7 @@ const {config} = require("./wdio.conf");
 
 const chromeHeadlessConfig = {
     ...config,
-    services: ['chromedriver'],
+    services: [[{chrome: 'latest'}]],
     capabilities: [{
         maxInstances: 3,
         browserName: "chrome",
@@ -11,7 +11,7 @@ const chromeHeadlessConfig = {
         },
     }],
     logLevel: 'warn',
-    path: "/wd/hub",
+//     path: "/wd/hub",
 };
 
 exports.config = chromeHeadlessConfig;
