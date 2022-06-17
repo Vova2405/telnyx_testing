@@ -7,7 +7,7 @@ const logOutButton  = '[class="tx-1Iv0kw"]';
 class HomePage {
 
     async accountDropdownFocus () {
-        await wait.waitUntilClickable(accountDropdown);
+//         await wait.waitUntilDisplayed(accountDropdown);
         await wait.moveTo(accountDropdown);
     }
 
