@@ -2,7 +2,7 @@ const {config} = require("./main.page.conf");
 
 const chromeHeadlessConfig = {
     ...config,
-    services: [[{chrome: 'latest'}]],
+    services: ['chromedriver'],
     capabilities: [{
         maxInstances: 3,
         browserName: "chrome",
@@ -11,7 +11,7 @@ const chromeHeadlessConfig = {
         },
     }],
     logLevel: 'warn',
-    path: "/wd/hub",
+//     path: "/wd/hub",
 };
 
 exports.config = chromeHeadlessConfig;
