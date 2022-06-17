@@ -24,14 +24,18 @@ class LoginPage {
     }
     
      async ifEnabled() {
-        if(await $('//button[text()="Log in"]').isEnabled() == true) {
-            await $('//button[text()="Log in"]').click();
-            console.log('clicked again');
-        } if(await $('//button[text()="Log in"]').isExisting() == false) {
-            console.log('not exist')
-        } else{
-            console.log('not enabled')
-        }
+        await browser.pause(5000)
+        
+            if(
+                await browser.getUrl() !== 'https://portal.telnyx.com/#/app/numbers/my-numbers' && 
+                await $('//button[text()="Log in"]').isExisting() == true) {
+                await $('//button[text()="Log in"]').click();
+                console.log('clicked again');
+            }  
+            else if(
+                await browser.getUrl() == 'https://portal.telnyx.com/#/app/numbers/my-numbers' &&
+            await $('//button[text()="Log in"]').isExisting() == false) {
+                console.log('not exist');} 
     }
     
     async buttonEnabled() {
