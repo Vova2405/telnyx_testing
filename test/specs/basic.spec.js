@@ -27,21 +27,21 @@ describe('main page testing',() => {
         await loginPage.errorMessageIsVisible()
     })
 
-    it('login with correct credentials', async () => {
-        await main.clickLoginButton();
-        await browser.getUrl();
-        await loginPage.setEmailValue('phenom2405@gmail.com');
-        await loginPage.setPasswordValue('Noone123456.');
-        await loginPage.getValues()
-        await loginPage.clickLoginButton();
-        await loginPage.ifEnabled()
-        await loginPage.ifEnabled()
-        await loginPage.ifEnabled()
-        await loginPage.ifEnabled()
-        // await loginPage.homeHeaderIsVisible();
-        await homePage.accountDropdownFocus();
-        await homePage.clickLOgOutButton()
-    })
+//     it('login with correct credentials', async () => {
+//         await main.clickLoginButton();
+//         await browser.getUrl();
+//         await loginPage.setEmailValue('phenom2405@gmail.com');
+//         await loginPage.setPasswordValue('Noone123456.');
+//         await loginPage.getValues()
+//         await loginPage.clickLoginButton();
+//         await loginPage.ifEnabled()
+//         await loginPage.ifEnabled()
+//         await loginPage.ifEnabled()
+//         await loginPage.ifEnabled()
+//         // await loginPage.homeHeaderIsVisible();
+//         await homePage.accountDropdownFocus();
+//         await homePage.clickLOgOutButton()
+//     })
 
     it('log in with empty values', async() => {
         await main.clickLoginButton();
