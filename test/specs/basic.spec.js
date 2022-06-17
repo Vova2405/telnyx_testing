@@ -29,16 +29,16 @@ describe('main page testing',() => {
 
     it('login with correct credentials', async () => {
         await main.clickLoginButton();
+        await browser.getUrl();
         await loginPage.setEmailValue('phenom2405@gmail.com');
         await loginPage.setPasswordValue('Noone123456.');
         await loginPage.getValues()
         await loginPage.clickLoginButton();
-        await loginPage.buttonEnabled();
-        await browser.pause(5000);
         await loginPage.ifEnabled()
-        await loginPage.clickLoginButton();
-        await homePage.redirectToHomePage();
-        await loginPage.homeHeaderIsVisible();
+        await loginPage.ifEnabled()
+        await loginPage.ifEnabled()
+        await loginPage.ifEnabled()
+        // await loginPage.homeHeaderIsVisible();
         await homePage.accountDropdownFocus();
         await homePage.clickLOgOutButton()
     })
