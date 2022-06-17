@@ -32,8 +32,8 @@ describe('main page testing',() => {
         await loginPage.setEmailValue('phenom2405@gmail.com');
         await loginPage.setPasswordValue('Noone123456.');
         await loginPage.clickLoginButton();
-
-//         await loginPage.homeHeaderIsVisible();
+        await browser.pause(3000)
+        await loginPage.homeHeaderIsVisible();
         await homePage.accountDropdownFocus();
         await homePage.clickLOgOutButton()
     })
